@@ -33,7 +33,7 @@ _AppointmentDataSource _getCalendarDataSource() {
 
 ```
 
-![BYSETPOS]()
+![BYSETPOS](https://user-images.githubusercontent.com/46158936/203042216-b6a471b3-05c8-4eaa-813b-2b79d54a8c9c.gif)
 
 ## Requirements to run the demo
 * [VS Code](https://code.visualstudio.com/download)
