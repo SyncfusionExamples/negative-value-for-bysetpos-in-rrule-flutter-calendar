@@ -7,32 +7,6 @@ By setting the BYSETPOS value to -1 and -2 in the Flutter Event Calendar, you ca
 
 In this sample, the recurrence appointment is created on Thursday of the week before last.
 
-```
-
-onSelected: (String value) {
-  setState(() {
-    if (value == 'BYSETPOS -1') {
-      _recurrenceRule = 'FREQ=MONTHLY;COUNT=10;BYDAY=TH;BYSETPOS=-1';
-    } else if (value == 'BYSETPOS -2') {
-      _recurrenceRule ='FREQ=MONTHLY;COUNT=10;BYDAY=TH;BYSETPOS=-2';
-    }
-  });
-}
-
-_AppointmentDataSource _getCalendarDataSource() {
-  List<Appointment> appointments = <Appointment>[];
-  appointments.add(Appointment(
-      startTime: DateTime.now().add(const Duration(hours: 1)),
-      endTime: DateTime.now().add(const Duration(hours: 2)),
-      subject: 'Planning',
-      color: Colors.orangeAccent,
-      recurrenceRule: _recurrenceRule));
-
-  return _AppointmentDataSource(appointments);
-}
-
-```
-
 ![BYSETPOS](https://user-images.githubusercontent.com/46158936/203042216-b6a471b3-05c8-4eaa-813b-2b79d54a8c9c.gif)
 
 ## Requirements to run the demo
