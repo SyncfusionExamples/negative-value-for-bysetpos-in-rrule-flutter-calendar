@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
-void main() => runApp(RecurrenceAppointmentPosition());
+void main() => runApp(const RecurrenceAppointmentPosition());
 
 class RecurrenceAppointmentPosition extends StatefulWidget {
+  const RecurrenceAppointmentPosition({super.key});
+
   @override
   State<StatefulWidget> createState() => ScheduleExample();
 }
@@ -12,7 +13,7 @@ class RecurrenceAppointmentPosition extends StatefulWidget {
 String _recurrenceRule = '';
 
 class ScheduleExample extends State<RecurrenceAppointmentPosition> {
-  List<String> _setPosition = <String>[
+  final List<String> _setPosition = <String>[
     'BYSETPOS -1',
     'BYSETPOS -2',
   ];
@@ -23,11 +24,11 @@ class ScheduleExample extends State<RecurrenceAppointmentPosition> {
         debugShowCheckedModeBanner: false,
         home: Scaffold(
             appBar: AppBar(
-              title: Text("Select BYSETPOS"),
+              title: const Text("Select BYSETPOS"),
               actions: <Widget>[
-                IconButton(icon: Icon(Icons.arrow_forward), onPressed: () {}),
+                IconButton(icon: const Icon(Icons.arrow_forward), onPressed: () {}),
                 PopupMenuButton<String>(
-                  icon: Icon(Icons.party_mode),
+                  icon: const Icon(Icons.party_mode),
                   itemBuilder: (BuildContext context) {
                     return _setPosition.map((String choice) {
                       return PopupMenuItem<String>(
@@ -58,8 +59,8 @@ class ScheduleExample extends State<RecurrenceAppointmentPosition> {
 _AppointmentDataSource _getCalendarDataSource() {
   List<Appointment> appointments = <Appointment>[];
   appointments.add(Appointment(
-      startTime: DateTime.now().add(Duration(hours: 1)),
-      endTime: DateTime.now().add(Duration(hours: 2)),
+      startTime: DateTime.now().add(const Duration(hours: 1)),
+      endTime: DateTime.now().add(const Duration(hours: 2)),
       subject: 'Planning',
       color: Colors.orangeAccent,
       recurrenceRule: _recurrenceRule));
